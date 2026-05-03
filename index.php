@@ -9,18 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 class="nunito-400">BIENVENIDOS, REGISTRA TU ASISTENCIA</h1>
+<body class="nunito-400">
+    <h1 >BIENVENIDOS, REGISTRA TU ASISTENCIA</h1>
       <!-- Contenedor donde se mostrará la fecha y hora actual -->
     <h2 id="fecha"></h2>
 
     <div class="container">
-        <a href="">INGRESAR AL SISTEMA</a>
-        <p>Ingrese su DNI</p>
+        <a class="acceso" href="">INGRESAR AL SISTEMA</a>
+        <p class="dni" >Ingrese su DNI</p>
         <form action="">
             <input type="text" placeholder="DNI del empleado" name="txtdni">
-            <a href="">ENTRADA</a>
-            <a href="">SALIDA</a>
+           <div class="botones">
+             <a class="entrada" href="">ENTRADA</a>
+            <a class="salida" href="">SALIDA</a>
+           </div>
         </form>
     </div>
 
