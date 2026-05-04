@@ -1,8 +1,10 @@
 <?php
-//   session_start();
-//   if (empty($_SESSION['user']) and empty($_SESSION['clave'])) {
-//       header('location:login/login.php');
-//   }
+   session_start();
+   //si la sesion del usuario y la clave estan vacias entonces,
+   //entonces no se ha logueado, redireciona a la pagina de login
+   if (empty($_SESSION['nombre']) and empty($_SESSION['apellido'])) {
+       header('location:login/login.php');
+  }
 
 ?>
 

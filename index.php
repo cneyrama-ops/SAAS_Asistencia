@@ -15,7 +15,7 @@
     <h2 id="fecha"></h2>
 
     <div class="container">
-        <a class="acceso" href="">INGRESAR AL SISTEMA</a>
+        <a class="acceso" href="vista/login/login.php">INGRESAR AL SISTEMA</a>
         <p class="dni" >Ingrese su DNI</p>
         <form action="">
             <input type="text" placeholder="DNI del empleado" name="txtdni">
