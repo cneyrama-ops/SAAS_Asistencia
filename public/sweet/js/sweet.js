@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 function advertencia(e) {
 
 	e.preventDefault();	/* para evitar que se ejecute el evento del enlace */
     var url=e.currentTarget.getAttribute('href');	/* para obtener la url del enlace */
 	
+=======
+$(".formulario-eliminar").submit(function (e) {
+	e.preventDefault();
+>>>>>>> asistencia
 	Swal.fire({
 		title: '¿Está seguro?',
 		text: '¡ No podrá recuperar este registro !',
@@ -28,8 +33,16 @@ function advertencia(e) {
 	}).then((result) => {
 		/* Read more about isConfirmed, isDenied below */
 		if (result.isConfirmed) {
+<<<<<<< HEAD
 		  //this.submit();
 		  window.location.href=url;	/* para redireccionar a la url del enlace */
 		}
 	  })
 }
+=======
+		  this.submit();
+		}
+	  })
+})
+
+>>>>>>> asistencia

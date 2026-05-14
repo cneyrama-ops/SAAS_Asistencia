@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+?>
+
+>>>>>>> asistencia
 <!doctype html>
 <html lang="es">
 
 <head>
+<<<<<<< HEAD
 
     <head lang="es">
+=======
+>>>>>>> asistencia
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -23,7 +33,10 @@
         <!-- font awesome -->
         <link rel="stylesheet" href="../public/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="../public/fontawesome/css/fontawesome.min.css">
+<<<<<<< HEAD
         <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
+=======
+>>>>>>> asistencia
 
         <!-- datatables -->
         <link rel="stylesheet" href="../public/app/publico/css/lib/datatables-net/datatables.min.css">
@@ -99,8 +112,11 @@
                 }
             }
         </style>
+<<<<<<< HEAD
 
     </head>
+=======
+>>>>>>> asistencia
 </head>
 
 <body class="with-side-menu">

@@ -8,12 +8,15 @@
 
 ?>
 
+<<<<<<< HEAD
 <style>
     ul li:nth-child(1) .activo{
         background: rgb(11, 150, 214) !important;
     }
 </style>
 
+=======
+>>>>>>> asistencia
 <!-- primero se carga el topbar -->
 <?php require('./layout/topbar.php'); ?>
 <!-- luego se carga el sidebar -->
@@ -22,6 +25,7 @@
 <!-- inicio del contenido principal -->
 <div class="page-content">
 
+<<<<<<< HEAD
     <H4 class="text-center">ASISTENCIAS DE EMPLEADOS</H4>
 
     <?php
@@ -83,6 +87,10 @@
 
   </tbody>
 </table>
+=======
+    PAGINA DE INICIO
+
+>>>>>>> asistencia
 </div>
 </div>
 <!-- fin del contenido principal -->
