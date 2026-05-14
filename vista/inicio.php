@@ -8,6 +8,12 @@
 
 ?>
 
+<style>
+    ul li:nth-child(1) .activo{
+        background: rgb(11, 150, 214) !important;
+    }
+</style>
+
 <!-- primero se carga el topbar -->
 <?php require('./layout/topbar.php'); ?>
 <!-- luego se carga el sidebar -->
@@ -16,8 +22,67 @@
 <!-- inicio del contenido principal -->
 <div class="page-content">
 
-    PAGINA DE INICIO
+    <H4 class="text-center">ASISTENCIAS DE EMPLEADOS</H4>
 
+    <?php
+    include('../modelo/conexion.php');
+    include('../controlador/controlado_eliminarasistencia.php');
+
+    $sql=$conexion->query("SELECT
+    asistencia.id_asistencia,
+    asistencia.id_empleado,
+    asistencia.entrada,
+    asistencia.salida,
+    empleado.id_empleado,
+    empleado.nombre as nom_empleado,
+    empleado.apellido,
+    empleado.dni,
+    cargo.id_cargo,
+    cargo.nombre as nom_cargo
+    FROM asistencia
+    INNER JOIN empleado ON asistencia.id_empleado = empleado.id_empleado
+    INNER JOIN cargo ON empleado.cargo = cargo.id_cargo");
+
+
+    ?>
+
+    <table class="table table-bordered table-hover col-12" id="example">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">EMPLEADO</th>
+      <th scope="col">DNI</th>
+      <th scope="col">CARGO</th>
+      <th scope="col">ENTRADA</th>
+      <th scope="col">SALIDA</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <?php
+    while ($datos=$sql->fetch_object()) {?>
+    <tr>
+     <td><?php echo $datos->id_asistencia ?></td>
+     <td><?php echo $datos->nom_empleado." ".$datos->apellido ?></td>
+     <td><?php echo $datos->dni ?></td>
+     <td><?php echo $datos->nom_cargo ?></td>
+     <td><?php echo $datos->entrada ?></td>
+     <td><?php echo $datos->salida ?></td>
+     <td> 
+        <a href="inicio.php?id=<?=$datos->id_asistencia ?>" onclick="advertencia(event)" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>  
+    </td>
+    </tr>
+    <?php }
+    ?>
+
+
+
+
+
+
+  </tbody>
+</table>
 </div>
 </div>
 <!-- fin del contenido principal -->

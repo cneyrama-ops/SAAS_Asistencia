@@ -1,5 +1,8 @@
-$(".formulario-eliminar").submit(function (e) {
-	e.preventDefault();
+function advertencia(e) {
+
+	e.preventDefault();	/* para evitar que se ejecute el evento del enlace */
+    var url=e.currentTarget.getAttribute('href');	/* para obtener la url del enlace */
+	
 	Swal.fire({
 		title: '¿Está seguro?',
 		text: '¡ No podrá recuperar este registro !',
@@ -25,8 +28,8 @@ $(".formulario-eliminar").submit(function (e) {
 	}).then((result) => {
 		/* Read more about isConfirmed, isDenied below */
 		if (result.isConfirmed) {
-		  this.submit();
+		  //this.submit();
+		  window.location.href=url;	/* para redireccionar a la url del enlace */
 		}
 	  })
-})
-
+}
