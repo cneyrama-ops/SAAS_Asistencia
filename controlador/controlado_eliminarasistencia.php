@@ -3,7 +3,7 @@ if (!empty($_GET['id'])) {
     # Obtener el ID de la asistencia a eliminar
     $id=$_GET['id'];
     echo $id;
-    $sql=$conexion->query("DELETE FROM asistencia WHERE id_asistencia=$id");
+    $sql=$conexion->query(" delete from asistencia WHERE id_asistencia=$id");
     if ($sql==true) {?>
     <script>
         $(function notificacion(){

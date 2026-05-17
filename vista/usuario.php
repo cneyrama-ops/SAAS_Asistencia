@@ -31,7 +31,7 @@
     $sql=$conexion->query("SELECT * FROM usuario");
 
     ?>
-    <a href="registro_usuario.php" class="btn btn-primary btn-rounded mb-3"><i class="fa-solid fa-plus"></i>&nbsp; Registrar</a>
+    <a href="registro_usuario.php" class="btn btn-primary btn-rounded mb-2"><i class="fa-solid fa-plus"></i> &nbsp; Registrar</a>
     <table class="table table-bordered table-hover w-100" id="example">
   <thead>
     <tr>

@@ -24,16 +24,30 @@
 
     <H4 class="text-center">REGISTRO DE USUARIOS</H4>
 
+    <?php
+    include "../modelo/conexion.php";
+    include "../controlador/controlador_registrar_usuarios.php"
+    ?>
+
     <div class="row">
-        <form action="">
+        <form action="" method="POST">
           <div class ="fl-flex-label mb-4 px-2 col-12 col-md-6">
-             <label for="nombre" class="text-gray">NOMBRE</label>
-             <input type="text" placeholder="Nombre" class= "input input__text">
-            <input type="text" placeholder="Nombre" class= "input input__text">
-            
+             <input type="text" placeholder="Nombre" class= "input input__text"txtnombre>     
+          </div>
+          <div class ="fl-flex-label mb-4 px-2 col-12 col-md-6">
+             <input type="text" placeholder="Apellido" class= "input input__text"txtapellido>     
+          </div>
+          <div class ="fl-flex-label mb-4 px-2 col-12 col-md-6">
+             <input type="text" placeholder="usuario" class= "input input__text"txtusuario>     
+          </div>
+          <div class ="fl-flex-label mb-4 px-2 col-12 col-md-6">
+             <input type="password" placeholder="Contraseña" class= "input input__text"txtpassword>     
+          </div>
+          <div class="text-right p-2">
+            <a href="" class="btn btn-secondary btn-rounded">Atras</a>
+            <button type="submit" value="ok" name="btnregistrar" class="btn btn-primary btn-rounded">Registrar</button>
           </div>
         </form>
-
     </div>
 
 
