@@ -18,7 +18,23 @@
                 </li>
 
                 <li class="red">
-                    <a href="acerca.php" class="">
+                    <a href="empleado.php" class="Activo">
+                        <img src="../public/img-inicio/team.png" class="img-inicio" alt="">
+                        <!-- <i class="fas fa-house-user"></i> -->
+                        <span class="lbl">EMPLEADOS</span>
+                    </a>
+                </li>
+
+                <li class="red">
+                    <a href="cargo.php" class="Activo">
+                        <img src="../public/img-inicio/team.png" class="img-inicio" alt="">
+                        <!-- <i class="fas fa-house-user"></i> -->
+                        <span class="lbl">CARGOS</span>
+                    </a>
+                </li>
+
+                <li class="red">
+                    <a href="acerca.php" class="Activo">
                         <img src="../public/img-inicio/info.png" class="img-inicio" alt="">
                         <!-- <i class="fas fa-exclamation"></i> -->
                         <span class="lbl">ACERCA DE</span>
