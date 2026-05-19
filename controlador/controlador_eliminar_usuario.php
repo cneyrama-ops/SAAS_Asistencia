@@ -10,8 +10,8 @@ if (!empty($_GET["id"])) {
                 type: 'success',
                 text: 'Usuario eliminado correctamente',
                 styling: 'bootstrap3'
-            });
-        });
+            })
+        })
     </script>
     <?php } else { ?>
          <script>

@@ -1,15 +1,14 @@
 <?php
 
-if (!empty($_POST["btnregistrar"])) {
-    if (!empty($_POST["txtnombre"]) and !empty($_POST["txtapellido"]) and !empty($_POST["txtusuario"]) and !empty($_POST["txtpassword"])) {
+if (!empty($_POST["btnmodificar"])) {
+    if (!empty($_POST["txtnombre"]) and !empty($_POST["txtapellido"]) and !empty($_POST["txtusuario"])) {
         $nombre=$_POST["txtnombre"];
         $apellido=$_POST["txtapellido"];
         $usuario=$_POST["txtusuario"];
-        $password=md5($_POST["txtpassword"]);
-        
-        $sql=$conexion->query(" select count(*) as total from usuario where usuario='$usuario' ");
-        if ($sql->fetch_object()->total > 0) {?>
-        <script>
+        $id=$_POST["txtid"];
+        $sql=$conexion->query(" select count(*) as total from usuario where usuario='$usuario' and id_usuario!=$id");
+        if ($sql->fetch_object()->total > 0) { ?>
+            <script>
             $(function notificacion(){
             new PNotify({
                 title:"ERROR",
@@ -20,25 +19,25 @@ if (!empty($_POST["btnregistrar"])) {
         })
     </script>
         <?php } else {
-            $registro=$conexion->query(" insert into usuario(nombre,apellido,usuario,password)values('$nombre','$apellido','$usuario','$password')");
-            if ($registro==true) {?>
-                <script>
+            $modificar=$conexion->query( "update usuario set nombre='$nombre', apellido='$apellido', usuario='$usuario' where id_usuario=$id " );
+            if ($modificar == true) { ?>
+                 <script>
                 $(function notificacion(){
                 new PNotify({
                     title:"CORRECTO",
                     type: "success",
-                    text:"El usuario se a registrado correctamente",
+                    text:"El usuario se a modificado correctamente",
                     styling:"bootstrap3"
             })
         })
     </script>
-            <?php } else {?>
+            <?php } else { ?>
                 <script>
                 $(function notificacion(){
                 new PNotify({
                     title:"INCORRECTO",
                     type: "error",
-                    text:"Error al registar usuario",
+                    text:"Error al modificar usuario",
                     styling:"bootstrap3"
             })
         })
@@ -47,9 +46,8 @@ if (!empty($_POST["btnregistrar"])) {
             
         }
         
-
-        } else {?>
-            <script>
+    } else { ?>
+        <script>
         $(function notificacion(){
             new PNotify({
                 title:"ERROR",
@@ -59,12 +57,15 @@ if (!empty($_POST["btnregistrar"])) {
             })
         })
     </script>
-<?php }?>
+    <?php } ?>
 
- <script>
+    <script>
         setTimeout(() => {
             window.history.replaceState(null, null, window.location.pathname);
         }, 0);
     </script>
-
+    
 <?php }
+
+
+?>

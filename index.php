@@ -18,9 +18,9 @@
         <a class="acceso" href="vista/login/login.php">INGRESAR AL SISTEMA</a>
         <p class="dni" >Ingrese su DNI</p>
         <form action="">
-            <input type="text" placeholder="DNI del empleado" name="txtdni">
+        <input type="text" placeholder="DNI del empleado" name="txtdni">
            <div class="botones">
-             <a class="entrada" href="">ENTRADA</a>
+            <a class="entrada" href="">ENTRADA</a>
             <a class="salida" href="">SALIDA</a>
            </div>
         </form>

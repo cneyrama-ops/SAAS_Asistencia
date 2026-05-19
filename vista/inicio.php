@@ -22,7 +22,7 @@
 <!-- inicio del contenido principal -->
 <div class="page-content">
 
-    <H4 class="text-center">ASISTENCIAS DE EMPLEADOS</H4>
+    <H4 class="text-center text-secondary">ASISTENCIAS DE EMPLEADOS</H4>
 
     <?php
     include('../modelo/conexion.php');
