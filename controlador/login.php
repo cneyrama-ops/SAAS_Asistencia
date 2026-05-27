@@ -19,6 +19,7 @@ session_start();
         if ($datos=$sql->fetch_object()){
         $_SESSION['nombre'] = $datos->nombre;
         $_SESSION['apellido'] = $datos->apellido;
+        $_SESSION['id'] = $datos->id_usuario;
             header("Location: ../inicio.php");
         } else {
             //si el usuario o contraseña son incorrectos muestra este mensaje

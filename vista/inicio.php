@@ -45,6 +45,12 @@
 
 
     ?>
+    <div class="text-right mb-2">
+      <a href="fpdf/ReporteAsistencia.php" target="_blank" class="btn btn-success"><i class="fas fa-file-pdf"></i>Generar reportes</a>
+    </div>
+    <div class="text-right mb-2">
+      <a href="reporte_asistencia.php" class="btn btn-primary"><i class="fas fa-plus"></i>Mas reportes</a>
+    </div>
 
     <table class="table table-bordered table-hover col-12" id="example">
   <thead>
